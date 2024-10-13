@@ -1,2 +1,2 @@
-# I upload the DSA
-DSA quesitons solutions:
+# All DSA concepts:
+<< Here i am uploading all DSA conceptes and it's questions solutions in java programming language.
