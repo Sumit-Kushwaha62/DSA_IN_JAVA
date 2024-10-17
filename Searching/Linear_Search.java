@@ -1,4 +1,4 @@
-package Arrays;
+package Searching;
 
 // Write Using the tutorials:
 
@@ -55,8 +55,7 @@ package Arrays;
 //         int number[] = { 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 23, 45, 43 };
 //         int key = 9;
 
-//         int result = finding(number, key);
-        
+//          finding(number, key);
 
 //     }
 // }
@@ -116,17 +115,15 @@ package Arrays;
 //         return -1;
 //     }
 //     public static void main(String[] args) {
-        
-
 
 //         int arr[] = {3,5,6,7,8,9,2,1};
 //         int key = 9;
 //         Search(arr, key);
-        
+
 //     }
 // }
 
-
+/* 
 class Linear_Search{
 
     public static int max_min(int arr[]){
@@ -151,5 +148,55 @@ class Linear_Search{
     public static void main(String[] args) {
         int arr[] = { 2,3,4,5,6,7,8,9};
         max_min(arr);
+    }
+}*/
+
+// class Linear_Search{
+
+//     public static void search(int arr[], int key){
+//         int smalles = Integer.MAX_VALUE;
+//         int largest = Integer.MIN_VALUE;
+
+//         for(int i = 0; i<arr.length; i++){
+//             if(smalles > arr[i]){
+//                 smalles = arr[i];
+//             }
+//             if(largest < arr[i]){
+//             largest = arr[i];
+//             }
+//         }
+
+//         System.out.println("Most largest is: " + largest);
+//         System.out.println("Most smallest is " + smalles);
+
+//     }
+//     public static void main(String[] args) {
+//         int arr[] = {3,4,5,8,7,6,4,3,4};
+// search(arr, 8);
+
+//     }
+// }
+
+class Linear_Search {
+
+    public static int search(int arr[], int key) {
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i] == key) {
+                System.out.println("key is found on index:" + i);
+                return i;
+            }
+
+        }
+        System.out.println("Key is not found:");
+        return -1;
+
+    }
+
+    public static void main(String[] args) {
+        int arr[] = { 1, 2, 3, 4, 5, 6, 7 };
+        int key = 0;
+        search(arr, key);
     }
 }

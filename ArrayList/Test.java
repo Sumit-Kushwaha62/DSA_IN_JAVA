@@ -1,17 +1,7 @@
+package ArrayList;
 
-
-
-public class SpiralMatrix {
+public class Test {
     public static void main(String[] args) {
-        
-
-
-
-
-
-
-
-
         
     }
 }

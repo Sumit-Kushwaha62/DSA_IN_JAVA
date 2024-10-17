@@ -20,3 +20,12 @@ public class Pairs_In_Array {
         ArraysPair(number);
     }
 }
+
+
+
+
+
+
+
+
+
