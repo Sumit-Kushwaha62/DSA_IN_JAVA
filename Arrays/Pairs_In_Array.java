@@ -1,31 +1,25 @@
+
 package Arrays;
 
-public class Pairs_In_Array {
+class Pairs_In_Array {
 
-    public static void ArraysPair(int number[]) {
-        int tp = 0;
-        for (int i = 0; i < number.length; i++) {
-            int currentNumber = number[i]; // 1,2,3,4,5,6,7,8
-            for (int j = i + 1; j < number.length; j++) {
-                System.out.print("(" + currentNumber + " , " + number[j] + ")" + " ");
-                tp++;
+    public static void pairs(int arr[]) {
+        int totalpairs = 0;
+        for (int i = 0; i < arr.length; i++) {
+            int currentNumber = arr[i];
+            for (int j = i + 1; j < arr.length; j++) {
+                System.out.print("( " + currentNumber + " , " + arr[j] + " )");
+                totalpairs++;
             }
+
             System.out.println();
         }
-        System.out.println("Total pairs of arrays is: = " + tp);
+        System.out.println("total paires is = " + totalpairs);
+
     }
 
     public static void main(String[] args) {
-        int number[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
-        ArraysPair(number);
+        int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8 };
+        pairs(arr);
     }
 }
-
-
-
-
-
-
-
-
-
