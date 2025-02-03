@@ -7,14 +7,12 @@ import java.util.*;
 public class BasicsOfArray {
     public static void main(String[] args) {
 
-        // Creating of an arrays:
         // First way
         int marks[] = new int[13];
 
         // Second way
         int numbers[] = { 2, 3, 4, 5 };
 
-        // Third way
         String fruits[] = { "apple", " mango", "orange" };
 
         // Taking user input in array:
@@ -29,7 +27,7 @@ public class BasicsOfArray {
         System.out.println("Chemistery:" + marks[1]);
         System.out.println("Maths:" + marks[2]);
 
-        // Update value
+        // We can update value
         marks[2] = 100;
 
         System.out.println("Maths:" + marks[2]);
@@ -67,6 +65,7 @@ public class BasicsOfArray {
 
 class BasicsOfArray {
     public static int insert(int[] arr, int size, int element, int index) {
+
         // Check if the array is full
         if (size >= arr.length) {
             System.out.println("Array is full. Cannot insert " + element);
@@ -174,23 +173,21 @@ class BasicOf_array {
     }
 }
 
-// ********* Searching and Traversal in a arrays**********
-
-class BasicsOfArray {
-
-    public static void Traversal(int arr[]) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-    }
-
-    public static int Searching(int arr[], int key) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == key) {
-                System.out.println("key is found on index: " + i);
-                return i;
-            }
-        }
-        return -1;
-    }
-}
+/*
+ * Major Operations on arrays:
+ * 
+ * 1> Inset
+ * 1> atfirst
+ * 2> atlast
+ * 3> atindex
+ * 
+ * 2> Delete
+ * 1> atfirst
+ * 2> atlast
+ * 3> atindex
+ * 
+ * 3> Searing
+ * 4> Traversing
+ * 5> User input
+ * 6> put as function argument
+ */

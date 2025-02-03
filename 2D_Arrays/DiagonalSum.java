@@ -1,6 +1,10 @@
 
 // <<<<<<<<<<< Brute Forch Approch >>>>>>>>>>>>>>
 
+// # Tested:
+
+import ArrayList.sorting;
+
 public class DiagonalSum {
 
     public static int DiagonalSum(int matrix[][]) {
@@ -21,35 +25,17 @@ public class DiagonalSum {
         return sum;
     }
 
-    public static void main(String[] args) {
-        int matrix[][] = { { 1, 2, 3 },
-                { 4, 5, 6 },
-                { 7, 8, 9 } };
+    // <<<<<<<<<<<< Optimal Approch >>>>>>>>>>>>>>>>>>
 
-    }
-}
-
-
-
-
-//<<<<<<<<<<<< Optimal Approch >>>>>>>>>>>>>>>>>>
-
-public class DiagonalSum {
-
-    public static int DiagonalSum(int matrix[][]) {
+    public static int DiagonalSum1(int matrix[][]) {
 
         int n = matrix.length;
         int sum = 0;
 
-        // Iterate through the matrix to calculate the diagonal sums
         for (int i = 0; i < n; i++) {
-            // Add primary diagonal element
+
             sum += matrix[i][i];
 
-            /*
-             * Add secondary diagonal element, only if it's not the same as the primary
-             * diagonal element
-             */
             if (i != n - i - 1) {
                 sum += matrix[i][n - i - 1];
             }
@@ -59,7 +45,7 @@ public class DiagonalSum {
     }
 
     public static void main(String[] args) {
-        int matrix[][] = { { 1, 2, 3 },
+        int arr[][] = { { 1, 2, 3 },
                 { 4, 5, 6 },
                 { 7, 8, 9 } };
 

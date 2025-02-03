@@ -1,4 +1,4 @@
-
+// # tested:
 package Arrays;
 
 class Largest_in_array {
@@ -17,15 +17,13 @@ class Largest_in_array {
                 largest = arr[i];
             }
         }
-
         System.out.println("smallest key is = " + smallest);
         System.out.println("largest key is = " + largest);
-
     }
 
     public static void main(String[] args) {
-        int arr[] = { 2, 4, 5, 6, 7, 8, 8, 9 };
-        largest(arr);
+        int arr[] = { 2, 4, 0, 5, 6, 7, 99, 8, 8, 9 };
 
+        largest(arr);
     }
 }
