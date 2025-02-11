@@ -1,5 +1,7 @@
 
-package Arrays;
+// package Arrays;
+
+import java.util.*;
 // Trapping rainwater is important question which is can ask same as in the interview 
 
 // Minimum numbers of bars should be > 2
@@ -44,9 +46,41 @@ public class Trapping_Rainwater {
         return trappedWater;
     }
 
+    public static int trapped(int height[]) {
+
+        // calculate leftMax boundary:
+
+        int n = height.length;
+        int leftMax[] = new int[n];
+        leftMax[0] = height[0];
+        for (int i = 1; i < n; i++) {
+            leftMax[i] = Math.max(height[i], leftMax[i - 1]);
+        }
+        // calculate rightMax boundary:
+
+        int rightMax[] = new int[n];
+        rightMax[n - 1] = height[n - 1];
+        for (int i = 2; i >= 0; i--) {
+            rightMax[i] = Math.max(height[i], rightMax[i + 1]);
+        }
+        // calculate totel traped water:
+
+        int totalTrapedwater = 0;
+        for (int i = 0; i < n; i++) {
+            int waterLevel = Math.min(rightMax[i], leftMax[i]);
+
+            totalTrapedwater = totalTrapedwater + waterLevel - height[i];
+        }
+
+        return totalTrapedwater;
+
+    }
+
     public static void main(String[] args) {
 
         int height[] = { 4, 2, 0, 6, 3, 2, 5 };
+        System.out.println(trapped(height));
+       
 
     }
 }

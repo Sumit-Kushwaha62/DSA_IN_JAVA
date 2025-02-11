@@ -40,42 +40,6 @@ public class spiralMetrix {
         }
     }
 
-    public static void test(int arr[][]) {
-        int startRow = 0, startCol = 0, endRow = arr.length, endCol = arr[0].length;
-
-        // top
-        for (int j = startCol; j < endCol; j++) {
-            System.out.println(arr[startRow][j]);
-        }
-        startRow++;
-
-        // right
-
-        for (int i = startRow; i >= endRow; i--) {
-            System.out.println(arr[i][endCol]);
-        }
-        endCol--;
-
-        // Bottom
-        if (startRow <= endCol) {
-            for (int i = endCol; i >= startCol; i--) {
-                System.out.print(arr[endRow][i] + " ");
-
-            }
-            endRow--;
-        }
-
-        // left
-
-        if (startCol <= endCol) {
-            for (int i = endRow; i >= startRow; i--) {
-                System.out.println(arr[i][startCol]);
-            }
-            startCol++;
-        }
-
-    }
-
     public static void main(String[] args) {
         int arr[][] = { { 1, 2, 3, },
                 { 4, 5, 6 },
@@ -84,9 +48,6 @@ public class spiralMetrix {
                 { 13, 14, 15 }
 
         };
-        System.out.println();
-        test(arr);
-        System.out.println();
-        printSpiral(arr);
+
     }
 }
