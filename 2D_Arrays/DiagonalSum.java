@@ -14,6 +14,7 @@ public class DiagonalSum {
         int colum = matrix[0].length;
 
         for (int i = 0; i < row; i++) {
+
             for (int j = 0; j < colum; j++) {
                 if (i == j) {
                     sum += matrix[i][j];
