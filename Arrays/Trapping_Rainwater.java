@@ -80,7 +80,6 @@ public class Trapping_Rainwater {
 
         int height[] = { 4, 2, 0, 6, 3, 2, 5 };
         System.out.println(trapped(height));
-       
 
     }
 }
