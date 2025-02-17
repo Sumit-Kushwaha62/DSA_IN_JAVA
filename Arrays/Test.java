@@ -1,257 +1,238 @@
-import java.util.ArrayList;
-import java.util.Scanner;
 
-class Test {
-
-    public static int Largest(int arr[], int key) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == key) {
-                return i;
-            }
-        }
-        return -1;
-    }
-
-    public static void largest(int arr[]) {
-        int max = Integer.MIN_VALUE;
-        int min = Integer.MAX_VALUE;
-
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-
-            }
-            if (arr[i] < min) {
-                min = arr[i];
-            }
-        }
-        System.out.println("max = " + max);
-        System.out.println("min = " + min);
-
-    }
-
-    public static int binary_search(int arr[], int key) {
-        int start = 0, end = arr.length - 1;
-
-        while (start <= end) {
-            int mid = (start + end) / 2;
-            // Coparishion:
-            if (arr[mid] == key) {
-                return mid;
-            }
-
-            if (arr[mid] < key) {
-                start = mid + 1;
-            } else {
-                end = mid - 1;
-            }
-
-        }
-        return -1;
-
-    }
-
-    public static void reverse(int arr[]) {
-        int start = 0, end = arr.length - 1;
-
-        while (start < end) {
-            int temp = arr[end];
-            arr[end] = arr[start];
-            arr[start] = temp;
-            start++;
-            end--;
-        }
-    }
-
-    public static void print(int arr[]) {
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
-    }
-
-    public static void pair(int arr[]) {
-        int totalpairs = 0;
-        for (int i = 0; i < arr.length; i++) {
-            int currentNumber = 0;
-
-            for (int j = 0; j < arr.length; j++) {
-                System.out.print("( " + currentNumber + ", " + arr[j] + " )");
-                totalpairs++;
-            }
-            System.out.println();
-        }
-        System.out.println("tatal paris is = " + totalpairs);
-    }
-
-    public static void printSubarray(int arr[]) {
-        int totalpairs = 0;
-        for (int start = 0; start < arr.length; start++) {
-            for (int end = start; end < arr.length; end++) {
-                for (int k = start; k <= end; k++) {
-                    System.out.print(arr[k] + " ");
-                }
-                System.out.println();
-                totalpairs++;
-            }
-            System.out.println();
-        }
-        System.out.println("The total paise is = " + totalpairs);
-    }
-
-    public static int search(int arr[][], int key, int row, int colom) {
-
-        for (int i = 0; i < row; i++) {
-            for (int j = 0; j < colom; j++) {
-                if (arr[i][j] == key) {
-
-                    System.out.println("The value is exit on index = " + i + " , " + j + " ");
-                    return arr[i][j];
-
-                }
-
-            }
-        }
-
-        System.out.println("The value is not found ");
-
-        return -1;
-
-    }
-
-public static void print(int arr[][]){
-for(int i = 0; i<arr.length; i++){
-    for(int j = 0; j<arr[i].length; j++){
-        System.out.print(arr[i][j]+" ");
-    }
-}
-}
-   
-public static void max(int arr[][]){
-    int max = Integer.MIN_VALUE;
-
-    for(int i = 0; i<arr.length; i++){
-        for(int j= 0; j<arr[0].length; j++){
-            if(arr[i][j]  > max){
-                max = arr[i][j];
-             
-            }
-        }
-    }
-
-
-
-    
-       System.out.println("The max value is = "+max);
-}
-
-
-public static void kadance(int arr[]){
-        int maxSum = Integer.MIN_VALUE;
-        int currentSum = 0;
-
-        for(int i = 0; i<arr.length; i++){
-            currentSum = currentSum + arr[i];
-        }
-
-        if(currentSum < 0){
-            currentSum = 0;
-        }
-
-        maxSum = Math.max(currentSum, maxSum);
-
-        System.out.println("The maximum sum is = "+ maxSum);
-    }
-
-    
-// Reverse printing: 
-public static void printArr(ArrayList <Integer> list ){
-    for(int i = list.size()-1; i>=0; i--){
-System.out.print(list.get(i)+" ");
-    }
-}
-
-
-
-public static void max(ArrayList <Integer> list){
-    int maximum = Integer.MIN_VALUE;
-    for(int i = 0; i<list.size(); i++){
-
-        if(list.get(i) > maximum){
-
-            maximum = list.get(i);
-        }
-     
-// maximum = Math.max(maximum, list.get(i));
-
-
-
-       
-    }
-    System.out.println("The max value is =" + maximum);
-   
-}
-
-public static void main(String[] args) {
-
-        // int arr[][] = { { 1, 2, 3, 4 },
-        //         { 5, 6, 7, 8 },
-        //         { 9, 100, 11, 12 },
-        // };
-       
-
-
-  ArrayList<Integer> list = new ArrayList<>();
-
-
-list.add(1);
-list.add(2);
-list.add(3);
-list.add(4);
-list.add(5);
-list.add(6);
-list.add(7);
-list.add(8);
-list.add(9);
-list.add(10);
-
-
-printArr(list);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// int arr[][] = new int[3][3];
-
-// Scanner sc = new Scanner(System.in);
-// System.out.println("Enter your numbers hare:");
-// for(int i = 0; i<arr.length; i++){
-//     for(int j = 0; j<arr[0].length; j++){
-//        arr[i][j] = sc.nextInt();
-//     }
+// // ************* 2D_Arrays ***************
+
+// //<<<<<<<<<<<<<<<< Spiral_Matrix >>>>>>>>>>>>>>>>>>>
+
+// public class Test {
+
+// public static void printSpiral(int matrix[][]) {
+// int startRow = 0, startCol = 0, endRow = matrix.length - 1, endCol =
+// matrix[0].length - 1;
+
+// while (startRow <= endRow && startCol <= endCol) {
+// // top row
+// for (int j = startCol; j <= endCol; j++) {
+// System.out.print(matrix[startRow][j] + " ");
+// }
+// startRow++;
+
+// // right column
+// for (int i = startRow; i <= endRow; i++) {
+// System.out.print(matrix[i][endCol] + " ");
+// }
+// endCol--;
+
+// // bottom row
+// if (startRow <= endRow) {
+// for (int j = endCol; j >= startCol; j--) {
+// System.out.print(matrix[endRow][j] + " ");
+// }
+// endRow--;
 // }
 
-// print(arr);
+// // left column
+// if (startCol <= endCol) {
+// for (int i = endRow; i >= startRow; i--) {
+// System.out.print(matrix[i][startCol] + " ");
+// }
+// startCol++;
+// }
+// }
+// }
 
+// public static void main(String[] args) {
+// // Matrix initialization.
+// int[][] matrix = {
+// { 1, 2, 3, 4 },
+// { 5, 6, 7, 8 },
+// { 9, 10, 11, 12 },
+// { 13, 14, 15, 16 }
+// };
 
+// // printSpiral(matrix);
+// int startRow = 0, startCol = 0, endRow = matrix.length - 1, endCol =
+// matrix[0].length - 1;
+// System.out.println();
+// }
+// }
+
+// <<<<<<<<<<<<< self solutions >>>>>>>>>>>>>>
+
+// public class Test {
+
+// public static void printSpiral(int matrix[][]) {
+// int startRow = 0, endRow = matrix.length - 1, startCol = 0, endCol =
+// matrix[0].length - 1;
+
+// while (startRow <= endRow && startCol <= endCol) {
+
+// // print top elements
+
+// for (int j = startCol; j <= endCol; j++) {
+// System.out.print(matrix[startRow][j]+" ");
+// }
+// startRow++;
+
+// // print right side elements
+
+// for (int i = startRow; i <= endRow; i++) {
+// System.out.print(matrix[i][endCol]+" ");
+// }
+// endCol--;
+
+// // print bottom elements
+
+// for (int j = endCol; j >= startCol; j++) {
+// if (startRow <= endRow) {
+// break;
+// }
+// System.out.print(matrix[endRow][j]+" ");
+// }
+// endRow--;
+
+// // print left elements
+// for (int i = endRow; i >= startRow; i++) {
+// if (startRow <= endRow) {
+// break;
+// }
+// System.out.print(matrix[i][startCol]+" ");
+// }
+// startCol++;
+
+// }
+// }
+
+// public static void main(String[] args) {
+// int[][] matrix = {
+// { 1, 2, 3, 4 },
+// { 5, 6, 7, 8 },
+// { 9, 10, 11, 12 },
+// { 13, 14, 15, 16 }
+// };
+
+// printSpiral(matrix);
+// }
+// }
+
+// ************ test: */
+
+/*
+ * class test {
+ * 
+ * public static void printSpiral(int arr[][]) {
+ * int startrow = 0, endrow = arr.length - 1, startCol = 0, endCol =
+ * arr[0].length - 1;
+ * 
+ * while (startrow <= endrow && startCol <= endCol) {
+ * 
+ * // top
+ * for (int i = startCol; i <= endCol; i++) {
+ * System.out.println(arr[startrow][i]);
+ * }
+ * startrow++;
+ * 
+ * // right
+ * for (int j = startrow; j <= endrow; j++) {
+ * System.out.println(arr[j][endCol]);
+ * }
+ * endCol--;
+ * }
+ * 
+ * // bottom
+ * 
+ * for (int i = endCol; i >= startCol; i--) {
+ * System.out.println(arr[endrow][i]);
+ * 
+ * if (startrow <= endrow) {
+ * break;
+ * }
+ * }
+ * endrow--;
+ * 
+ * // left
+ * 
+ * for (int i = endrow; i >= startrow; i--) {
+ * System.out.println(arr[i][startCol]);
+ * if (startCol <= endCol) {
+ * break;
+ * }
+ * }
+ * 
+ * startCol++;
+ * 
+ * }
+ * 
+ * public record Test() {
+ * }
+ * 
+ * public static void main(String[] args) {
+ * int arr[][] = { { 1, 3, 4, 6, 7 },
+ * { 0, 9, 8, 8, 7 } };
+ * printSpiral(arr);
+ * 
+ * }
+ * }
+ */
+
+// class Test {
+//     import java.util.*;
+
+//     public static void spiralMetrix(int arr[][]) {
+//  int startRow = 0, startCol = 0, endRow = arr.length-1, endCol = arr[0].length  - 1;
+
+// while (startRow <= endRow && startCol <= endCol) {
+
+//     // top
+//     for(int j = startCol; j<=endCol; j++){
+// System.out.println(arr[startRow][j]);
+//     }
+// startRow++;
+
+// // right
+// for(int i = startRow; i<=endRow; i++){
+//     System.out.println(arr[i][endCol]);
+// }
+// endCol--;
+
+// // bottomm
+// for(int j = endCol; j>= startCol; j--){
+//     System.out.println(arr[endRow][j]);
+// }
+// endRow--;
+
+// for(int i = endRow; i>= startRow; i--){
+// System.out.println(arr[i][startCol]);
+// }
+// startCol++;
+
+public class Test {
+
+    public static boolean staircaseSerch(int matrix[][], int key) {
+
+        int row = 0, col = matrix[0].length - 1;
+
+        while (row < matrix.length && col >= 0) {
+
+            if (matrix[row][col] == key) {
+                System.out.println("Key is found on =" + "(" + row + " , " + col + " )");
+                return true;
+            } else if (key < matrix[row][col]) {
+                col--;
+            } else {
+                row++;
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int matrix[][] = { { 10, 20, 30, 40 },
+                { 15, 25, 35, 45 },
+                { 27, 29, 37, 48 },
+                { 32, 33, 39, 50 }, };
+
+        int key = 33;
+        staircaseSerch(matrix, key);
 
     }
 }

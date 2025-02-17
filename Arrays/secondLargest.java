@@ -68,3 +68,16 @@ public class secondLargest {
 
     }
 }
+// boolean accending = true;
+// boolean deccending = true;
+
+// for(int i = 0; i<nums.length-1; i++){
+// if(nums[i] > nums[i+1]){
+// accending = false;
+// }
+
+// if(nums[i] < nums[i+1]){
+// deccending = false;
+// }
+// }
+// return accending || deccending;
