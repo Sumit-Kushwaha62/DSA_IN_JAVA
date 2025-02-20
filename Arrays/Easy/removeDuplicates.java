@@ -1,4 +1,4 @@
-package Easy;
+// package Easy;
 
 public class removeDuplicates {
 
@@ -19,11 +19,17 @@ public class removeDuplicates {
     public static void main(String[] args) {
 
         int[] nums = { 1, 2, 2, 3, 4, 4, 5 };
-        System.out.println(removeDuplicate(nums));
+        int arr[] = { 2, 2, 3, 3, 4, 4, 5, 5 };
+       // System.out.println(removeDuplicate(nums));
         // Print elements:
+
+
         System.out.println();
+
+        System.out.println();
+
         for (int i = 0; i < nums.length - 1; i++) {
-            System.out.print(nums[i] + " ");
+            System.out.print(arr[i] + " ");
 
         }
 

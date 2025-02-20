@@ -1,3 +1,6 @@
+
+// package Easy;
+
 public class SecondLargest {
 
     public static int secondLargest(int arr[]) {
@@ -37,6 +40,6 @@ public class SecondLargest {
 
     public static void main(String[] args) {
         int arr[] = { 2, 3, 8, 9, 7 };
-        System.out.println(secondlargest1(arr));
+
     }
 }

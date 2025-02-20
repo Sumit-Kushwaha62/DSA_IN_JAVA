@@ -1,3 +1,5 @@
+package Easy;
+
 class ArraySortedRoted{
 
     public static boolean check(int arr[]){

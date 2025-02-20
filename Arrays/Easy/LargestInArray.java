@@ -1,3 +1,5 @@
+
+package Easy;
 public class LargestInArray {
 
     public static int largest(int arr[]) {

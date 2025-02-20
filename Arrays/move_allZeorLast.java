@@ -2,8 +2,11 @@
 
 public class move_allZeorLast {
 
-    // <<<<<<<<<<<<<<<<< Optiamal approach using swapping >>>>>>>>>>>>>>>:
+    // <<<<<<<<<<<<<<<<< Optiamal approach using swapping >>>>>>>>>>>>>>>: 
+
+
     public static void moveZeros(int[] arr) {
+        // find first 0th index:
         int j = -1;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 0) {

@@ -1,4 +1,4 @@
-// package Easy;
+package Easy;
 
 public class CheckArraySorted {
 
@@ -19,9 +19,11 @@ public class CheckArraySorted {
         return accending || deccending;
     }
 
+ 
+
     public static void main(String[] args) {
         int arr[] = { 1, 2, 3, 4, 7 };
-        System.out.println(check(arr));
+       System.out.println(test(arr));
     }
 
 }
