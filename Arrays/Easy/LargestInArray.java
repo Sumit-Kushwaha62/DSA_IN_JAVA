@@ -1,5 +1,6 @@
 
 package Easy;
+
 public class LargestInArray {
 
     public static int largest(int arr[]) {
@@ -14,10 +15,12 @@ public class LargestInArray {
         return max;
     }
 
+   
+
     public static void main(String[] args) {
 
-        int arr[] = { 2, 3, 8, 9, 7 };
-        System.out.println(largest(arr));
+        int arr[] = { 2, 3, 8, 9, 7, 10 };
+    System.out.println(largest(arr));
 
     }
 }

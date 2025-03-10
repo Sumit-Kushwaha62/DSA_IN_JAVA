@@ -1,59 +1,51 @@
 
-
 import java.util.*;
-
 
 public class majorityElements {
 
+    // Brute Force Approch:
 
-// Brute Force Approch:
+    public static int majorityElement(int arr[]) {
+        int n = arr.length;
 
-public static int majorityElement(int arr[]) {
-    int n = arr.length;
+        for (int i = 0; i < n; i++) {
+            int frequency = 0;
 
-    for (int i = 0; i < n; i++) {
-        int frequency = 0;
+            for (int j = 0; j < n; j++) {
+                if (arr[j] == arr[i]) {
+                    frequency++;
+                }
+            }
 
-        for (int j = 0; j < n; j++) {
-            if (arr[j] == arr[i]) {
-                frequency++;
+            if (frequency > n / 2) {
+                return arr[i];
             }
         }
 
-        if (frequency > n / 2) {
-            return arr[i];
-        }
+        // If no majority element found
+        return -1;
     }
 
-    // If no majority element found
-    return -1;
-}
+    // Using for each loops:
+    public static int majorityElement1(int arr[]) {
+        int n = arr.length;
 
+        for (int val : arr) {
+            int frequency = 0;
+            for (int el : arr) {
+                if (el == val) {
+                    frequency++;
 
-// Using for each loops:
-public static int majorityElement1(int arr[]){
-    int n = arr.length;
-    
-
-    for(int val: arr){
-        int frequency = 0;
-        for(int el : arr){
-            if(el == val){
-                frequency++;
-
+                }
+            }
+            if (frequency > n / 2) {
+                return val;
             }
         }
-        if(frequency > n/2){
-            return val;
-        }
+        return -1;
     }
-    return -1;
-}
 
-// <<<<<<<<<<<< Better Approach using sorting >>>>>>>>>>>>>
-
-
-
+    // <<<<<<<<<<<< Better Approach using sorting >>>>>>>>>>>>>
 
     public static int majorityElement3(int arr[]) {
 
@@ -81,48 +73,42 @@ public static int majorityElement1(int arr[]){
         return -1;
     }
 
+    // <<<<<<<<<< most optimal approch using Moore's Voting Algorithm >>>>>>>>>>>
 
-//<<<<<<<<<< most optimal approch using Moore's Voting Algorithm >>>>>>>>>>> 
+    public static int majorityElement4(int arr[]) {
+        int freq = 0, ans = 0;
 
-
-public static int majorityElement4(int arr[]){
-    int freq = 0, ans = 0;
-
-    for(int i = 0; i<arr.length; i++){
-        if(freq == 0){
-            ans = arr[i];
-        } 
-        if( arr[i] == ans){
-            freq++;
+        for (int i = 0; i < arr.length; i++) {
+            if (freq == 0) {
+                ans = arr[i];
+            }
+            if (arr[i] == ans) {
+                freq++;
+            } else {
+                freq--;
+            }
         }
-        else{
-            freq--;
+
+        // if majority elments is not exit so this algo return a last value of arrya
+        // which is not right so tha we need to write validation code:
+
+        // Step 2: Verify the candidate
+        freq = 0; // Reset frequency to count occurrences of the candidate
+        for (int num : arr) {
+            if (num == ans) {
+                freq++;
+            }
         }
+
+        if (freq > arr.length / 2) {
+            return ans; // Candidate is the majority element
+        }
+
+        return -1; // No majority element exists
     }
-    
-
-// if majority elments is not exit so this algo return a last value of arrya
-// which is not right so tha we need to write validation code:
-
-// Step 2: Verify the candidate
-freq = 0; // Reset frequency to count occurrences of the candidate
-for (int num : arr) {
-    if (num == ans) {
-        freq++;
-    }
-}
-
-if (freq > arr.length / 2) {
-    return ans; // Candidate is the majority element
-}
-
-return -1; // No majority element exists
-}
-
-
 
     public static void main(String[] args) {
-        int arr[] = { 1,2,2,1,1};
+        int arr[] = { 1, 2, 2, 1, 1 };
         System.out.println(majorityElement4(arr));
     }
 }

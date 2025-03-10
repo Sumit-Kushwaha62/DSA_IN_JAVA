@@ -1,34 +1,18 @@
+public class countDigit {
 
-class countDigit {
+    public static int countnumber(int number) {
+        int result = 0;
 
-    public static int countdigit(int N) {
-    int res = 0;
-
-    while (N > 0) {
-    N = N / 10;
-    res++;
+        while (number > 0) {
+            result = number / 10;
+            result++;
+        }
+        return result;
     }
-
-    return res;
-
-    }
-
-    // public static int countdigit(int N) {
-    //     int res = 0;
-
-    //     while (N > 0) {
-    //         res = N / 10;
-    //         res++;
-
-    //     }
-    //     return res;
-
-    // }
 
     public static void main(String[] args) {
-        int N = 233453;
-System.out.println(countdigit(N));
-System.out.println("Test");
-      
+        int number = 293842;
+        System.out.println(countnumber(number));
+        System.out.println("Test");
     }
 }

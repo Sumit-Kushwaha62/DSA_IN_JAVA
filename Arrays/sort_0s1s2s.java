@@ -3,7 +3,7 @@ package Arrays;
 
 public class sort_0s1s2s {
 
-    public static void sort(int arr[]){
+    public static void sort(int a[]){
         int m = 0, l = 0, h = arr.length - 1;
 
         while (m<= h) {
@@ -24,6 +24,6 @@ public class sort_0s1s2s {
         }
     }
     public static void main(String[] args) {
-        
+        int a[] ={ 1,2,1,2,0,0};
     }
 }
