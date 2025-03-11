@@ -1,5 +1,4 @@
-package Easy;
-
+//package Easy;
 
 public class SecondLargest {
 
@@ -38,11 +37,8 @@ public class SecondLargest {
         return secondLargest;
     }
 
-  
-
     public static void main(String[] args) {
         int arr[] = { 2, 3, 8, 9, 7 };
-       
 
     }
 }

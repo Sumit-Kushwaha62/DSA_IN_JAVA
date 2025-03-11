@@ -26,6 +26,8 @@ public class leftRotationByDplace {
      * }
      */
 
+    // Better approch:
+
     public static void rotate(int arr[], int start, int end) {
         while (start < end) {
             int temp = arr[start];
@@ -49,7 +51,6 @@ public class leftRotationByDplace {
         // Rotate the remaining elements
         rotate(arr, k, n - 1);
     }
-    
 
     public static void print(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
@@ -59,46 +60,37 @@ public class leftRotationByDplace {
     }
 
 
-
-    // Rotate an array by  D places; '
-    
-public static void rotate1(int arr[], int start, int end){
-    while (start <  end) {
-        
+public static void rotatex(int arr[] , int start, int end){
+    while (start < end) {
         int temp = arr[start];
         arr[start] = arr[end];
         arr[end] = temp;
         start++;
         end--;
     }
-
-
 }
 
-public static void roteteByPlace(int arr[], int D){
+public static void rotateZ(int arr[], int k){
+int n = arr.length;
+k = k%n;
 
-    int n = arr.length;
-    D = D%n;
-
-
-    rotate1(arr, 0, n-1);
-    rotate1(arr, 0, D-1);
-    rotate1(arr, D, n-1);
-
-
+    rotatex(arr, 0, n-1);
+    rotatex(arr, 0, k-1);
+    rotatex(arr, k, n-1);
 }
-
-
 
     public static void main(String[] args) {
         int arr[] = { 2, 3, 4, 5, 6 };
         int k = 3; // Number of rotations
         int D = 3;
 
-        // rotateArray(arr, k); // Pass the array and the number of rotations
-        // print(arr); // Print the rotated array
+         rotateArray(arr, k); // Pass the array and the number of rotations
+        print(arr); // Print the rotated array
 
-        roteteByPlace(arr, D);
-        print(arr);
+
+        // System.out.println();
+        // rotateZ(arr, k);
+        // print(arr);
+
     }
 }
