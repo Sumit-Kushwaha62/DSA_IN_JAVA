@@ -73,6 +73,24 @@ public class majorityElements {
         return -1;
     }
 
+    // Better approch using, Use only if you get all the element is unique:
+    public static int majorityElement2(int arr[]) {
+        int n = arr.length;
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        // Store frequency of each element
+        for (int num : arr) {
+            map.put(num, map.getOrDefault(num, 0) + 1);
+
+            // Check if this element is the majority element
+            if (map.get(num) > n / 2) {
+                return num;
+            }
+        }
+
+        return -1; // No majority element found
+    }
+
     // <<<<<<<<<< most optimal approch using Moore's Voting Algorithm >>>>>>>>>>>
 
     public static int majorityElement4(int arr[]) {
@@ -110,5 +128,6 @@ public class majorityElements {
     public static void main(String[] args) {
         int arr[] = { 1, 2, 2, 1, 1 };
         System.out.println(majorityElement4(arr));
+
     }
 }
