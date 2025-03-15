@@ -11,7 +11,7 @@ public class CheckArraySorted {
             if (arr[i] > arr[i + 1]) {
                 accending = false;
             }
-            if (arr[i]< arr[i + 1]) {
+            if (arr[i] < arr[i + 1]) {
                 deccending = false;
             }
 
@@ -19,42 +19,12 @@ public class CheckArraySorted {
         return accending || deccending;
     }
 
-
-public static boolean test(int arr[]){
-    int n  = arr.length;
-    boolean accending = true;
-boolean  deccending = true;
-
-    for(int i = 0; i<n-1; i++){
-        if(arr[i] > arr[i+1]){
-            accending  = false;
-        }
-        if(arr[i] < arr[i+1]){
-            deccending = false;
-        }
-    }
-    return accending || deccending;
-}
     public static void main(String[] args) {
         int arr[] = { 1, 2, 3, 4, 7 };
-        int arr1[] = { 9,8,7,6};
-        int arr2[] = { 3,4,8,5,2,9};
+        int arr1[] = { 9, 8, 7, 6 };
+        int arr2[] = { 3, 4, 8, 5, 2, 9 };
 
 
-
-        System.out.println(check(arr));
-
-        System.out.println(check(arr1));
-        System.out.println(check(arr2));
-
-        System.out.println("-----------------");
-
-
-        System.out.println(test(arr));
-        System.out.println(test(arr1));
-        System.out.println(test(arr2));
-
-  
     }
 
 }

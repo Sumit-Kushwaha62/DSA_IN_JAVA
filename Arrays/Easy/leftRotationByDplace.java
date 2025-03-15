@@ -28,29 +28,29 @@ public class leftRotationByDplace {
 
     // Better approch:
 
-    public static void rotate(int arr[], int start, int end) {
-        while (start < end) {
-            int temp = arr[start];
-            arr[start] = arr[end];
-            arr[end] = temp;
-            start++;
-            end--;
-        }
-    }
+    // public static void rotate(int arr[], int start, int end) {
+    // while (start < end) {
+    // int temp = arr[start];
+    // arr[start] = arr[end];
+    // arr[end] = temp;
+    // start++;
+    // end--;
+    // }
+    // }
 
-    public static void rotateArray(int arr[], int k) {
-        int n = arr.length;
-        k = k % n; // Handle cases where k is greater than the array length
+    // public static void rotateArray(int arr[], int k) {
+    // int n = arr.length;
+    // k = k % n; // Handle cases where k is greater than the array length
 
-        // Rotate the first part of the array
-        rotate(arr, 0, n - 1);
+    // // Rotate the first part of the array
+    // rotate(arr, 0, n - 1);
 
-        // Rotate the first k elements
-        rotate(arr, 0, k - 1);
+    // // Rotate the first k elements
+    // rotate(arr, 0, k - 1);
 
-        // Rotate the remaining elements
-        rotate(arr, k, n - 1);
-    }
+    // // Rotate the remaining elements
+    // rotate(arr, k, n - 1);
+    // }
 
     public static void print(int arr[]) {
         for (int i = 0; i < arr.length; i++) {
@@ -59,38 +59,46 @@ public class leftRotationByDplace {
 
     }
 
+    public static void test1(int arr[], int start, int end) {
+        while (start < end) {
+            int temp = arr[start];
+            arr[start] = arr[end];
+            arr[end] = temp;
+            start++;
+            end--;
 
-public static void rotatex(int arr[] , int start, int end){
-    while (start < end) {
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-        start++;
-        end--;
+        }
+
     }
-}
 
-public static void rotateZ(int arr[], int k){
-int n = arr.length;
-k = k%n;
+    public static void test(int arr[], int k) {
+        int n = arr.length;
+        k = k % n;
 
-    rotatex(arr, 0, n-1);
-    rotatex(arr, 0, k-1);
-    rotatex(arr, k, n-1);
-}
+        // for left rotaion:
+        test1(arr, 0, k - 1);
+        test1(arr, k, n - 1);
+        test1(arr, 0, n - 1);
+
+        // for right rotation:
+        // test1(arr, 0, n - 1);
+        // test1(arr, 0, k - 1);
+        // test1(arr, k, n - 1);
+
+    }
 
     public static void main(String[] args) {
         int arr[] = { 2, 3, 4, 5, 6 };
         int k = 3; // Number of rotations
         int D = 3;
 
-         rotateArray(arr, k); // Pass the array and the number of rotations
-        print(arr); // Print the rotated array
+        // rotateArray(arr, k); // Pass the array and the number of rotations
+        // print(arr); // Print the rotated array
 
-
-        // System.out.println();
-        // rotateZ(arr, k);
-        // print(arr);
+        print(arr);
+        System.out.println();
+        test(arr, k);
+        print(arr);
 
     }
 }

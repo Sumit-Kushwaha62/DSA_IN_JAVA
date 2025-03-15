@@ -1,6 +1,8 @@
 //package Easy;
 
 public class LargestInArray {
+    // We can solve this question using inbuilt Arrays.sort but it's have nlogn
+    // complexity which is not good:
 
     public static int largest(int arr[]) {
         int max = Integer.MIN_VALUE;
@@ -14,14 +16,12 @@ public class LargestInArray {
         return max;
     }
 
-  
-
     public static void main(String[] args) {
 
         int arr[] = { 2, 3, 8, 9, 7, 10 };
-    System.out.println(largest(arr));
+        System.out.println(largest(arr));
 
-   
+      
 
     }
 }

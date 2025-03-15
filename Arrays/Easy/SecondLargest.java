@@ -4,7 +4,7 @@ public class SecondLargest {
 
     public static int secondLargest(int arr[]) {
         int max = Integer.MIN_VALUE;
-        int n = arr.length - 1;
+        int n = arr.length;
         int secondlargest = -1;
 
         for (int i = 0; i < n; i++) {
@@ -30,15 +30,18 @@ public class SecondLargest {
             if (arr[i] > largest) {
                 secondLargest = largest;
                 largest = arr[i];
-            } else if (arr[i] > largest && arr[i] < secondLargest) {
+            } else if (arr[i] < largest && arr[i] < secondLargest) {
                 secondLargest = arr[i];
             }
         }
-        return secondLargest;
+        return (secondLargest == Integer.MIN_VALUE) ? -1 : secondLargest;
     }
 
     public static void main(String[] args) {
         int arr[] = { 2, 3, 8, 9, 7 };
+
+        System.out.println();
+        System.out.println(secondLargest(arr));
 
     }
 }

@@ -27,7 +27,7 @@ public class moveZerosLast {
         }
     }
 
-    // Most Optimal Approch:
+    // ***************Most Optimal Approch***************************
     public static void swap(int arr[], int i, int j) {
         int temp = arr[i];
         arr[i] = arr[j];
@@ -63,10 +63,7 @@ public class moveZerosLast {
     public static void main(String[] args) {
         int nums[] = { 2, 3, 0, 3, 0, 2, 0, 4, 0 };
 
-        moveZeroOptimal(nums);
-
         // print:
-
         for (int i = 0; i < nums.length; i++) {
             System.out.print(nums[i] + " ");
         }

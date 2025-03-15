@@ -52,7 +52,7 @@ public class findMissingNumber {
     // Optimal approch using Sum method:
 
     public static int find4(int arr[]) {
-        int n = arr.length + 1;
+        int n = arr.length;
         int sum = n * (n + 1) / 2;
         int res = 0;
 
@@ -77,11 +77,50 @@ public class findMissingNumber {
         return xor;
     }
 
+    public static int test(int arr[]) {
+
+        int n = arr.length;
+        for (int i = 1; i < n + 1; i++) {
+            int count = 0;
+            for (int j = 0; j < n; j++) {
+                if (i == arr[j]) {
+                    count++;
+                    break;
+                }
+
+            }
+            if (count == 0) {
+                return i;
+            }
+
+        }
+        return -1;
+    }
+
+    public static int test1(int arr[]) {
+        int n = arr.length;
+        int sum = n * (n + 1) / 2;
+        int result = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            result = result + arr[i];
+
+        }
+        return sum - result;
+
+    }
+
     public static void main(String[] args) {
         int arr[] = { 3, 0, 1 };
 
-        System.out.println();
-        System.out.println(find5(arr));
+        // System.out.println();
+        // System.out.println(find5(arr));
+
+        System.out.println(test(arr));
+
+        System.out.println(test1(arr));
+
+        System.out.println(find4(arr));
 
     }
 }

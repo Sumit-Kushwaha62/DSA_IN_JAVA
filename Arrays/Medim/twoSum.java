@@ -57,11 +57,14 @@ public class twoSum {
         throw new IllegalArgumentException("no found");
     }
 
-
     public static void main(String[] args) {
         int arr[] = { 1, 7, 3, 2, 9, 7, 2 };
         int target = 10;
         System.out.println(Arrays.toString(twosum(arr, target)));
+
+        System.out.println("---------------");
+
+        System.out.println(sum1(arr, target));
     }
 
 }
