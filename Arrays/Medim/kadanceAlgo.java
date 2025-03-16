@@ -23,21 +23,18 @@ public class kadanceAlgo {
         int max = Integer.MIN_VALUE;
 
         for (int i = 0; i < n; i++) {
+            int sum = 0;
             for (int j = i; j < n; j++) {
-                int sum = 0;
-                for (int k = i; k <= j; k++) {
-                    sum = sum + arr[j];
-
-                    max = Math.max(sum, max);
-                }
+                sum += arr[j];
+                max = Math.max(max, sum);
             }
-
         }
         return max;
     }
 
     // Most optimal approch:
     public static int maxSum3(int arr[]) {
+        
 
         int max = Integer.MIN_VALUE;
         int sum = 0;
