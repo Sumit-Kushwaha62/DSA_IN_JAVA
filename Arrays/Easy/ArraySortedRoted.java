@@ -14,7 +14,7 @@ class ArraySortedRoted{
         return count <= 1;
     }
 
-public static boolean test(int arr[]){
+public static int test(int arr[]){
     int n = arr.length;
     int count = 0;
     
@@ -24,7 +24,7 @@ public static boolean test(int arr[]){
         }
 
     }
-    return count <= 1;
+    return count = 1;
 }
     public static void main(String[] args) {
        int arr[] = {3,4,5,1,2};
