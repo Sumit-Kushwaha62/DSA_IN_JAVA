@@ -63,6 +63,8 @@ public class moveZerosLast {
     public static void main(String[] args) {
         int nums[] = { 2, 3, 0, 3, 0, 2, 0, 4, 0 };
 
+        moveZeroOptimal(nums);
+
         // print:
         for (int i = 0; i < nums.length; i++) {
             System.out.print(nums[i] + " ");

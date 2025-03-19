@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 
 public class Test {
 
@@ -25,32 +26,28 @@ public class Test {
     // return ans; // ✅ सही डेटा टाइप return कर रहे हैं
     // }
 
-    public static void test(int arr[]) {
-        int n = arr.length;
-        int temp = arr[n-1];
-
-        for(int i = n-2; i>=0; i--){
-            arr[i+1]  = arr[i];
-        }
-        arr[0] = temp;
-      
-
-       
    
+
+    public static int test(int arr[]) {
+        int n = arr.length;
+
+   
+        
     }
 
     public static void main(String[] args) {
-        int arr[] = { 3, 4, 5, 1, 2 };
-        int target = 9;
-        //System.out.println(test(arr));
-        System.out.println();
-        test(arr);
-    
-        for(int i =0; i<arr.length; i++){
-            System.out.print(arr[i]+" ");
+        int arr[] = { 1, 2, 3, 5};
+
+        System.out.println(test(arr));
+        
+
+        System.out.println("---------------");
+
+        // print:
+
+        for (int i = 0; i < arr.length; i++) {
+
+            System.out.print(arr[i] + " ");
         }
-
-        System.out.println("-----------");
-
     }
 }
