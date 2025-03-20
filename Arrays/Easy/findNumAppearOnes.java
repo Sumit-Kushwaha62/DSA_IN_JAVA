@@ -60,10 +60,6 @@ public class findNumAppearOnes {
         // System.out.println();
         // System.out.println(appear(arr));
 
-        System.out.println(test(arr));
-
-        System.out.println();
-
-        System.out.println(test1(arr));
+       System.out.println(find(arr));
     }
 }
