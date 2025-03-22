@@ -53,7 +53,7 @@ public class kadanceAlgo {
 
     public static void main(String[] args) {
         int arr[] = { 2, -3, 9, -4, 5, -1, -1, 7 };
-        System.out.println(maxSum3(arr));
+        System.out.println(maxSum1(arr));
 
     }
 }

@@ -2,9 +2,7 @@ import java.util.HashMap;
 
 public class majoritynBy2Element {
 
-
-
-    // Brute force approch: 
+    // Brute force approch:
     public static int majorityElement(int arr[]) {
         int n = arr.length;
 
@@ -25,22 +23,38 @@ public class majoritynBy2Element {
         return -1;
     }
 
-// Better approch using, Use only if you get all the element is unique:
-    public static int majorityElement1(int arr[]) {
-        int n = arr.length;
-        HashMap<Integer, Integer> map = new HashMap<>();
+    // <<<<<<<<<< most optimal approch using Moore's Voting Algorithm >>>>>>>>>>>
 
-        // Store frequency of each element
-        for (int num : arr) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
-            
-            // Check if this element is the majority element
-            if (map.get(num) > n / 2) {
-                return num;
+    public static int majorityElement4(int arr[]) {
+        int freq = 0, ans = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            if (freq == 0) {
+                ans = arr[i];
+            }
+            if (arr[i] == ans) {
+                freq++;
+            } else {
+                freq--;
             }
         }
 
-        return -1; // No majority element found
+        // if majority elments is not exit so this algo return a last value of arrya
+        // which is not right so tha we need to write validation code:
+
+        // Step 2: Verify the candidate
+        freq = 0; // Reset frequency to count occurrences of the candidate
+        for (int num : arr) {
+            if (num == ans) {
+                freq++;
+            }
+        }
+
+        if (freq > arr.length / 2) {
+            return ans; // Candidate is the majority element
+        }
+
+        return -1; // No majority element exists
     }
 
     public static void main(String[] args) {

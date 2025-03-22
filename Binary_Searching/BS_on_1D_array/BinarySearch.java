@@ -24,34 +24,14 @@ public class BinarySearch {
         return -1;
     }
 
-    public static int test(int numbers[], int key){
-        int n  = numbers.length;
-        int start = 0, end = n -1;
-      
-
-        while (start <= end) {
-  int mid = (start+end)/2;
-
-            if(numbers[mid] == key){
-                return mid;
-            }
-            else if(numbers[mid] > key){
-                end--;
-            }else{
-                start++;
-            }
-        }
-        return -1;
-    }
-
+  
     public static void main(String[] args) {
 
         int numbers[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 22, 33, 44, 45 };
         int key = 9;
 
-        //int result = binarySearch(numbers, key);
+        int result = binarySearch(numbers, key);
 
-        int result = test(numbers, key);
 
         System.out.println("Index for key is :" + result);
 
