@@ -9,12 +9,24 @@ public class Test {
         }
     }
 
+    public static int test(int arr[], int x) {
+        int n = arr.length;
+
+        for (int i = 0; i < n; i++) {
+            if (arr[i] >= x) {
+                // lower bound found:
+                return i;
+            }
+        }
+        return -1;
+
+    }
+
     public static void main(String[] args) {
-        int arr[] = { 1, 1, 2, 1, 1, 1, 1, 0, 0 };
+        int arr[] = { 1, 2, 8, 10, 10, 12, 19 };
+        int x = 5;
 
-        int arr1[] = { 2, -3, 9, -4, 5, -1, -1, 7 };
-
-        // System.out.println(test(arr1));
+        System.out.println(test(arr, x));
         // test(arr);
 
         System.out.println("---------------");
