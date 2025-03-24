@@ -12,13 +12,6 @@ public class Test {
     public static int test(int arr[], int x) {
         int n = arr.length;
 
-        for (int i = 0; i < n; i++) {
-            if (arr[i] >= x) {
-                // lower bound found:
-                return i;
-            }
-        }
-        return -1;
 
     }
 
